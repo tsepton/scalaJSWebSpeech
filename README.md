@@ -4,14 +4,14 @@ Facades based on the [MDN documentation](https://developer.mozilla.org/en-US/doc
 
 ## Getting started
 
-For a complete example see [Using the Web Speech API page](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) on the MDN documentation. However, here is a quick demonstration adapted from the same page:
+For a complete example see [Using the Web Speech API page](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) on the MDN documentation. However, here is a quick demonstration of the speech recognition API adapted from the same page:
 
 ```scala
 import org.scalajs.dom.{Event, console}
 
 import scala.util.Try
 
-object SpeechInterpreter extends ModalityInterpreter {
+object SpeechRecognition {
 
   val recognition: SpeechRecognition =
     Try(new SpeechRecognition()).getOrElse(new WebkitSpeechRecognition())
